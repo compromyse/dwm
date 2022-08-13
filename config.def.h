@@ -53,7 +53,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[1] = "0";
-static const char *dmenucmd[] = { "dmenu_run", "-i", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *dmenucmd[] = { "/home/raghu/.dwm/dmenu.sh", NULL };
 static const char *termcmd[]  = { "terminator", NULL };
 
 #include "movestack.c"
