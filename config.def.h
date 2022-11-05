@@ -2,7 +2,7 @@
 static const unsigned int borderpx  = 2;
 static const int gappx              = 5;
 static const unsigned int snap      = 32;
-static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
+static const unsigned int systraypinning = 1;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayonleft = 1;           /* 0: systray in the right corner, >0: systray on left of status text */
 static const unsigned int systrayspacing = 2;   /* systray spacing */
 static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
@@ -53,7 +53,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[1] = "0";
-static const char *dmenucmd[] = { "/home/raghu/.dwm/dmenu.sh", NULL };
+static const char *dmenucmd[] = { "/home/compromyse/.dwm/dmenu.sh", NULL };
 static const char *termcmd[]  = { "terminator", NULL };
 
 #include "movestack.c"
