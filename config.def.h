@@ -26,6 +26,7 @@ static const char *const autostart[] = {
   "dunst", NULL,
   "wmname", "LG3D", NULL,
   "/home/compromyse/.dwm/bar.sh", NULL,
+  "xss-lock", "-l", "--", "xsecurelock", NULL,
  	NULL /* terminate */
 };
 
@@ -63,12 +64,14 @@ static const Layout layouts[] = {
 static char dmenumon[1] = "0";
 static const char *dmenucmd[] = { "/home/compromyse/.dwm/dmenu.sh", NULL };
 static const char *termcmd[]  = { "terminator", NULL };
+static const char *lockcmd[]  = { "xsecurelock", NULL };
 
 #include "movestack.c"
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_space,  spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY,                       XK_l,      spawn,          {.v = lockcmd } },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
