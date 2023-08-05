@@ -75,13 +75,16 @@ static char dmenumon[1] = "0";
 static const char *dmenucmd[] = { "rofi", "-show", "drun", "-show-icons", NULL };
 static const char *termcmd[]  = { "terminator", NULL };
 static const char *lockcmd[]  = { "xsecurelock", NULL };
+static const char *powercmd[] = {"/home/compromyse/.dwm/power.sh", NULL}
 
 #include "movestack.c"
+#include <X11/XF86keysym.h>
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_space,  spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_x,      spawn,          {.v = lockcmd } },
+	{ MODKEY,                       XF86XK_PowerOff,spawn,     {.v = powercmd } },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
