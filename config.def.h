@@ -36,6 +36,7 @@ static const char *const autostart[] = {
   "xss-lock", "-l", "--", "xsecurelock", NULL,
   "blueman-applet", NULL,
   "nm-applet", NULL,
+  "volumeicon", NULL,
  	NULL /* terminate */
 };
 
@@ -71,7 +72,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[1] = "0";
-static const char *dmenucmd[] = { "/home/compromyse/.dwm/dmenu.sh", NULL };
+static const char *dmenucmd[] = { "rofi", "-show", "drun", "-show-icons", NULL };
 static const char *termcmd[]  = { "terminator", NULL };
 static const char *lockcmd[]  = { "xsecurelock", NULL };
 
