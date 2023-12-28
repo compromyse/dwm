@@ -27,12 +27,12 @@ static const char *colors[][3]      = {
 };
 
 static const char *const autostart[] = {
-  "/usr/lib/x86_64-linux-gnu/polkit-mate/polkit-mate-authentication-agent-1", NULL,
-  "feh", "--bg-scale", "/home/compromyse/Pictures/wallpaper.jpg", NULL,
+  "/usr/libexec/polkit-mate-authentication-agent-1", NULL,
+  "feh", "--bg-scale", "/home/raghu/Pictures/wallpaper.jpg", NULL,
  	"picom", NULL,
   "dunst", NULL,
   "wmname", "LG3D", NULL,
-  "/home/compromyse/.dwm/bar.sh", NULL,
+  "/home/raghu/.dwm/bar.sh", NULL,
   "xss-lock", "-l", "--", "xsecurelock", NULL,
   "blueman-applet", NULL,
   "nm-applet", NULL,
@@ -72,10 +72,10 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[1] = "0";
-static const char *dmenucmd[] = { "rofi", "-show", "drun", "-show-icons", NULL };
-static const char *termcmd[]  = { "terminator", NULL };
+static const char *dmenucmd[] = { "j4-dmenu-desktop", NULL };
+static const char *termcmd[]  = { "st", NULL };
 static const char *lockcmd[]  = { "xsecurelock", NULL };
-static const char *powercmd[] = {"/home/compromyse/.dwm/power.sh", NULL};
+static const char *powercmd[] = {"/home/raghu/.dwm/power.sh", NULL};
 
 #include "movestack.c"
 #include <X11/XF86keysym.h>
