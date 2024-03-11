@@ -70,7 +70,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[1] = "0";
-static const char *dmenucmd[] = { "j4-dmenu-desktop", NULL };
+static const char *dmenucmd[] = { "rofi", "-show", "drun", NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char *lockcmd[]  = { "xsecurelock", NULL };
 static const char *powercmd[] = {"/etc/nixos/dist/dwm/power.sh", NULL};
