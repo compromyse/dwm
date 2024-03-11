@@ -13,7 +13,7 @@ static const int showsystray        = 1;        /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
 static const int user_bh            = 32;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
-static const char *fonts[]          = { "monospace:size=10", "fontawesome:size=10" };
+static const char *fonts[]          = { "UbuntuMono Nerd Font Mono:size=12" };
 static const char dmenufont[]       = "monospace:size=10";
 static const char col_gray1[]       = "#131417";
 static const char col_gray2[]       = "#444444";
@@ -27,16 +27,14 @@ static const char *colors[][3]      = {
 };
 
 static const char *const autostart[] = {
-  "/usr/libexec/polkit-mate-authentication-agent-1", NULL,
-  "feh", "--bg-scale", "/home/raghu/Pictures/wallpaper.jpg", NULL,
- 	"picom", NULL,
+  "feh", "--bg-scale", "/etc/nixos/dist/wallpaper.jpg", NULL,
+  "picom", NULL,
   "dunst", NULL,
   "wmname", "LG3D", NULL,
-  "/home/raghu/.dwm/bar.sh", NULL,
+  "/etc/nixos/dist/dwm/bar.sh", NULL,
   "xss-lock", "-l", "--", "xsecurelock", NULL,
   "blueman-applet", NULL,
   "nm-applet", NULL,
-  "volumeicon", NULL,
  	NULL /* terminate */
 };
 
@@ -73,9 +71,9 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[1] = "0";
 static const char *dmenucmd[] = { "j4-dmenu-desktop", NULL };
-static const char *termcmd[]  = { "st", NULL };
+static const char *termcmd[]  = { "alacritty", NULL };
 static const char *lockcmd[]  = { "xsecurelock", NULL };
-static const char *powercmd[] = {"/home/raghu/.dwm/power.sh", NULL};
+static const char *powercmd[] = {"/etc/nixos/dist/dwm/power.sh", NULL};
 
 #include "movestack.c"
 #include <X11/XF86keysym.h>
