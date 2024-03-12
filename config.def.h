@@ -27,8 +27,9 @@ static const char *colors[][3]      = {
 };
 
 static const char *const autostart[] = {
+  "xsetroot", "-cursor_name", "left_ptr", NULL,
   "feh", "--bg-scale", "/etc/nixos/dist/wallpaper.jpg", NULL,
-  "picom", NULL,
+  "picom", "--backend", "glx", NULL,
   "dunst", NULL,
   "wmname", "LG3D", NULL,
   "/etc/nixos/dist/dwm/bar.sh", NULL,
